@@ -1,3 +1,13 @@
+/*This class is named "Course" and is a part of the "crs" package. It represents a course in a university or educational institution. The class implements the Serializable interface, which means its objects can be serialized and deserialized. Overall, this class serves as a blueprint for creating and managing course objects within a university or educational system.
+*/
+
+
+
+
+
+
+
+
 package crs;
 
 import java.io.BufferedReader;
@@ -120,9 +130,12 @@ public class Course implements Serializable {
 	}
 	
 	public void removeStudent(String name) {
-		this.students.remove(name);
-		this.enrolledStudents -=1;
-	}
+	// Remove the specified student from the list of enrolled students
+	this.students.remove(name);
+	
+	// Decrease the count of enrolled students by 1
+	this.enrolledStudents -= 1;
+}
 	
 	
 	@Override

@@ -1,3 +1,9 @@
+/*This class, named Admin, extends the User class and implements the AdminInterface interface. It represents an administrative user in a course registration system. Overall, this class provides functionality for creating, managing, and viewing courses, as well as registering students and performing administrative tasks related to course information.
+*/
+	
+
+
+
 package crs;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,34 +34,38 @@ public class Admin extends User implements AdminInterface, java.io.Serializable 
 	
 	//WORKS
 	public static String createCourses() throws IOException {
-		
-		Scanner input = new Scanner(System.in);
-		Scanner input2 = new Scanner(System.in);
-		System.out.print("Course Name: ");
-		String courseName = input.nextLine();
-		
-		System.out.print("Course ID: ");
-		String courseID = input.nextLine();
-		
-		System.out.print("Max # of Students: ");
-		int maxStudents = input2.nextInt();
-		
-		int currentStudents = 0;
-				
-		System.out.println("Course Instructor: ");
-		String courseInstructor = input.nextLine();
-		
-		System.out.print("Section Number: ");
-		int sectionNumber = input2.nextInt();
-		
-		System.out.print("Course Location: ");
-		String courseLocation = input.nextLine();
-		
-		
-		//Then add to .csv file
-		Course newCourse = new Course (courseName,courseID,maxStudents,currentStudents,null,courseInstructor,sectionNumber,courseLocation);
-		crsMain.courseArrayList.add(newCourse);
-		return "Course added.";
+	    // Create scanner objects to read user input
+	    Scanner input = new Scanner(System.in);
+	    Scanner input2 = new Scanner(System.in);
+
+	    // Prompt for course details
+	    System.out.print("Course Name: ");
+	    String courseName = input.nextLine();
+
+	    System.out.print("Course ID: ");
+	    String courseID = input.nextLine();
+
+	    System.out.print("Max # of Students: ");
+	    int maxStudents = input2.nextInt();
+
+	    int currentStudents = 0; // Initialize the current number of students to 0
+
+	    System.out.println("Course Instructor: ");
+	    String courseInstructor = input.nextLine();
+
+	    System.out.print("Section Number: ");
+	    int sectionNumber = input2.nextInt();
+
+	    System.out.print("Course Location: ");
+	    String courseLocation = input.nextLine();
+
+	    // Create a new course object with the provided details
+	    Course newCourse = new Course(courseName, courseID, maxStudents, currentStudents, null, courseInstructor, sectionNumber, courseLocation);
+
+	    // Add the new course to the courseArrayList
+	    crsMain.courseArrayList.add(newCourse);
+
+	    return "Course added."; // Return a success message
 	}
 	
 	//WORKS

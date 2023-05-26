@@ -1,3 +1,6 @@
+/* this code provides methods to interact with a user during the login process. It prompts the user to enter their first name, last name, username, and password, and reads the inputs using Scanner. However, the askUser method is currently empty and doesn't perform any specific functionality.*/
+
+
 package crs;
 import java.util.Scanner;
 
@@ -30,12 +33,13 @@ public class Login extends User{
 	}
 
 	@Override
-	public void password() {
-		Scanner input = new Scanner(System.in);
-		System.out.print("Password: ");
-		String password = input.nextLine();
-	}
-
+       public void password() {
+	Scanner input = new Scanner(System.in);
+	System.out.print("Password: ");
+	
+	// Prompt the user to enter their password
+	String password = input.nextLine();
+}
 	
 	
 	
